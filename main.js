@@ -27,17 +27,10 @@ let answer = await inquirer.prompt([
     }
 ]);
 let fromAmount = currency[answer.from]; // exchange rate
-
 let toAmount = currency[answer.to]; // exchange rate
-
 let amount = answer.amount;
-
 let baseAmount = amount / fromAmount; // usd base currency    // 4
-
 let convertedAmount = baseAmount * toAmount;
-
 convertedAmount = Math.floor(convertedAmount);
-
 console.log(`You have converted ${amount} ${answer.from} into ${answer.to} `);
-
 console.log('Your Converted amount is', convertedAmount);
